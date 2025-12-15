@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Notes",
+  "version": "1.0.0",
+  "description": "A modern sidebar note-taking extension.",
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "permissions": ["sidePanel", "storage", "identity"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Open Side Panel"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
