@@ -64,13 +64,13 @@ export default function NoteEditor() {
         <Button variant="ghost" onClick={() => navigate("/")} className="-ml-2">
           &larr; Back
         </Button>
-        <Button onClick={handleSave} disabled={saving}>
+        <button variant="ghost" onClick={handleSave} disabled={saving} className="text-black bg-transparent hover:bg-black hover:text-white border p-1 px-5 cursor-pointer border-black">
           {saving ? "Saving..." : "Save"}
-        </Button>
+        </button>
       </header>
       <div className="flex-1 overflow-y-auto p-4 max-w-2xl mx-auto w-full space-y-4">
         <input
-          className="w-full text-4xl font-bold bg-transparent border-none focus:outline-none placeholder:text-muted-foreground/50"
+          className="w-full text-3xl font-bold bg-transparent border-none focus:outline-none placeholder:text-muted-foreground/50"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}

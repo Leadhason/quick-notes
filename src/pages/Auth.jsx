@@ -83,7 +83,7 @@ export default function Auth() {
               required
             />
 
-            <Button type="submit" className="w-full" disabled={loading}>
+            <Button type="submit" className="w-full bg-black text-white hover:bg-black/90" disabled={loading}>
               {loading ? "Processing..." : isLogin ? "Sign In" : "Sign Up"}
             </Button>
           </form>

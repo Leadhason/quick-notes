@@ -82,12 +82,12 @@ export default function Home() {
       </main>
 
       <div className="fixed bottom-6 right-6">
-        <Button
+        <button
           onClick={handleCreate}
-          className="rounded-full h-14 w-14 shadow-xl p-0 text-2xl bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center"
+          className="rounded-full h-14 w-14 flex items-center justify-center text-center cursor-pointer shadow-xl p-2 text-4xl font-light bg-black text-white transition-transform hover:scale-105 active:scale-95"
         >
           +
-        </Button>
+        </button>
       </div>
     </div>
   );

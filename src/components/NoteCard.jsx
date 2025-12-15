@@ -6,7 +6,7 @@ export const NoteCard = ({ note }) => {
   return (
     <div
       onClick={() => navigate(`/note/${note.id}`)}
-      className="p-4 rounded-lg bg-card border text-card-foreground shadow-sm hover:shadow-md transition-all cursor-pointer space-y-2 group"
+      className="p-4 rounded-md bg-card border border-black text-card-foreground shadow-sm hover:border-primary transition-all cursor-pointer space-y-2 group"
     >
       <h3 className="font-semibold truncate group-hover:text-primary transition-colors">
         {note.title || "Untitled"}
