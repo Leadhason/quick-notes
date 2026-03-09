@@ -96,3 +96,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide scrollbar but keep scrolling */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Contenteditable placeholder */
+[contenteditable]:empty:before {
+  content: attr(data-placeholder);
+  color: hsl(var(--muted-foreground) / 0.5);
+  pointer-events: none;
+}

@@ -6,9 +6,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import Auth from "./pages/Auth";
 import Home from "./pages/Home";
 import NoteEditor from "./pages/NoteEditor";
+import Settings from "./pages/Settings";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useAuth();
@@ -58,16 +60,26 @@ function AppRoutes() {
           </PrivateRoute>
         }
       />
+      <Route
+        path="/settings"
+        element={
+          <PrivateRoute>
+            <Settings />
+          </PrivateRoute>
+        }
+      />
     </Routes>
   );
 }
 
 export default function App() {
   return (
-    <Router>
-      <AuthProvider>
-        <AppRoutes />
-      </AuthProvider>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </Router>
+    </ThemeProvider>
   );
 }
